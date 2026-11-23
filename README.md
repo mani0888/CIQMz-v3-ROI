@@ -56,7 +56,7 @@ Extract features for a single image (CIQM<sub>ZN</sub>).
 
 Extract ROI and nROI feature vectors (CIQM<sub>ZN_Saliency</sub>) once the saliency masks are available.
 
-Note: For CIQM<sub>ZN_Saliency</sub>, the same 21 features are computed twice — once on the ROI region and once on the nROI region — producing f_ROI and f_nROI.
+Note: For CIQM<sub>ZN_Saliency</sub>, the same 21 features are computed twice, once on the ROI region and once on the nROI region, producing f<sub>ROI<sub> and f<sub>nROI<sub>.
 
 
 **2. generateSaliencyMapsonImages.m**
@@ -65,10 +65,9 @@ Generates normalized saliency maps for every image in a specified folder, using 
 
 Supported saliency models:
 
-Saliency model                                      Where to obtain the code
-Itti	                                              Provided in the Itti and Improved Itti/ folder
-Improved Itti	                                      Provided in the Itti and Improved Itti/ folder
-CovSal, LDS, & EML-Net (Python-based code)          Download from https://saliency.tuebingen.ai/results.html
+**Itti & Improved Itti:** Provided in the Itti and Improved Itti/ folder
+
+**CovSal, LDS, & EML-Net:** Download from https://saliency.tuebingen.ai/results.html
 
 **How to use:**
 Place the saliency model's code in the MATLAB path (or in the appropriate subfolder).
@@ -81,6 +80,7 @@ Run the script — the normalized saliency maps can be saved for later use with 
 **3. Evaluation Scripts**
 
 **Evaluation_SDB_CIQMzn.m**
+
 Performs same-database (SDB) evaluation for the CIQM<sub>ZN</sub> metric.
 
 Uses an 80:20 train–test split (by content, so no image content overlaps between train and test).
