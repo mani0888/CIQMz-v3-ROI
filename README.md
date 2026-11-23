@@ -12,6 +12,7 @@ For full methodological details, please refer to the paper:
 
 Muhammad Usman Khan, Ming Ronnier Luo, Imran Mehmood, "Saliency-Guided No-Reference Image Quality Assessment using a Naturalness-Enhanced Color-domain Image Quality Metric", CIC34.
 
+
 **Repository Structure**
 
 CIQMz-v3-ROI/
@@ -32,6 +33,7 @@ CIQMz-v3-ROI/
 
 └── ... (supporting .mat files, labels, etc.)
 
+
 **Requirements**
 
 MATLAB (tested with recent versions; R2019b or later recommended)
@@ -40,17 +42,14 @@ Statistics and Machine Learning Toolbox (for fitrsvm / SVR training)
 
 Image Processing Toolbox (for LBP, GLCM, color-space conversions, etc.)
 
+
 **File Descriptions & Usage**
+
 
 **1. Feature Calculation Files**
 
 These scripts compute the 21-dimensional CIQM<sub>ZN</sub> feature vector from an input image.
 
-**The feature set comprises:**
-
-Category	Features
-Appearance-based (14) — from CIQM<sub>Z</sub>	Lightness, Chroma, Lightness contrast, Chroma contrasts, Sharpness contrasts, Depth/Chroma/Clarity ratios, Global contrast, Local contrasts, Sharpness
-Statistical naturalness (7) — new in CIQM<sub>ZN</sub>	Lightness entropy (En<sub>L</sub>), Hue entropy (En<sub>hue</sub>), Grayscale LBP entropies at 3 scales (En<sub>LBP₁</sub>, En<sub>LBP₀.₅</sub>, En<sub>LBP₀.₂₅</sub>), RGB-LBP entropy (En<sub>LBP_RGB</sub>), GLCM contrast (C<sub>GLCM</sub>)
 Use these files to:
 
 Extract features for a single image (CIQM<sub>ZN</sub>).
@@ -59,16 +58,17 @@ Extract ROI and nROI feature vectors (CIQM<sub>ZN_Saliency</sub>) once the salie
 
 Note: For CIQM<sub>ZN_Saliency</sub>, the same 21 features are computed twice — once on the ROI region and once on the nROI region — producing f_ROI and f_nROI.
 
+
 **2. generateSaliencyMapsonImages.m**
 
 Generates normalized saliency maps for every image in a specified folder, using one of the supported saliency models. From each saliency map, ROI and nROI masks are obtained using mean thresholding (as described in the paper).
 
 Supported saliency models:
 
-Saliency model	Where to obtain the code
-Itti	Provided in the Itti and Improved Itti/ folder
-Improved Itti	Provided in the Itti and Improved Itti/ folder
-CovSal, LDS, & EML-Net (Python-based code)	Download from https://saliency.tuebingen.ai/results.html
+Saliency model                                      Where to obtain the code
+Itti	                                              Provided in the Itti and Improved Itti/ folder
+Improved Itti	                                      Provided in the Itti and Improved Itti/ folder
+CovSal, LDS, & EML-Net (Python-based code)          Download from https://saliency.tuebingen.ai/results.html
 
 **How to use:**
 Place the saliency model's code in the MATLAB path (or in the appropriate subfolder).
