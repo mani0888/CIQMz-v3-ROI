@@ -175,14 +175,7 @@ TID2013 and KADID "Color Saturation" categories contain color-inverted images; t
 
 If you use this code or the CIQM<sub>ZN</sub> / CIQM<sub>ZN_Saliency</sub> metrics in your research, please cite:
 
-bibtex
-@inproceedings{khan2025ciqmzn,
-  title     = {Saliency-Guided No-Reference Image Quality Assessment using a
-               Naturalness-Enhanced Color-domain Image Quality Metric},
-  author    = {Khan, Muhammad Usman and Luo, Ming Ronnier and Mehmood, Imran},
-  booktitle = {Color and Imaging Conference (CIC34)},
-  year      = {2026}
-}
+Khan M U, Mehmood I, & Luo M R. Visual Saliency-based Naturalness Enhanced Color-domain Image Quality Metric. Color and Imaging Conference, 2026.
 
 **Contact**
 
