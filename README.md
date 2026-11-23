@@ -13,14 +13,23 @@ For full methodological details, please refer to the paper:
 Muhammad Usman Khan, Ming Ronnier Luo, Imran Mehmood, "Saliency-Guided No-Reference Image Quality Assessment using a Naturalness-Enhanced Color-domain Image Quality Metric", CIC34.
 
 **Repository Structure**
+
 CIQMz-v3-ROI/
+
 │
+
 ├── Feature calculation files          # CIQM<sub>ZN</sub> and CIQM<sub>ZN_Saliency</sub> feature extraction
+
 ├── Itti and Improved Itti/            # MATLAB implementations of Itti and Improved Itti saliency models
+
 ├── generateSaliencyMapsonImages.m     # Generates saliency maps for a test image as shown in the Paper
+
 ├── Evaluation_SDB_CIQMzn.m            # Same-database (SDB) evaluation for CIQM<sub>ZN</sub>
+
 ├── Evaluation_SDB_CIQMzn_ROI.m        # Same-database (SDB) evaluation for CIQM<sub>ZN_Saliency</sub>
+
 ├── images                             # Sample / benchmark images used for evaluation
+
 └── ... (supporting .mat files, labels, etc.)
 
 **Requirements**
