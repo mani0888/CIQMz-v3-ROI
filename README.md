@@ -140,7 +140,7 @@ If you use the full datasets, download them from their original sources:
 
 **TID2013** – http://www.ponomarenko.info/tid2013.htm
 
-**CIDIQ** – see the corresponding publications ([19] in the paper)
+**CIDIQ** – https://folk.ntnu.no/mariupe/CIDIQ.zip 
 
 **KADID** – http://database.mmsp-kn.de/kadid-10k-database.html
 
