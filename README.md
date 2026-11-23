@@ -1,5 +1,6 @@
 **CIQMz-v3-ROI**
-Saliency-Guided No-Reference Image Quality Assessment using a Naturalness-Enhanced Color-domain Image Quality Metric
+
+**Saliency-Guided No-Reference Image Quality Assessment using a Naturalness-Enhanced Color-domain Image Quality Metric**
 
 This repository contains the MATLAB implementation of two no-reference image quality metrics (NR-IQMs) proposed in the CIC34 paper:
 
