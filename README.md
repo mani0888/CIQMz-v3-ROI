@@ -96,6 +96,7 @@ Reproduce the CIQM<sub>ZN</sub> baseline results (Table 2 in the paper).
 Benchmark CIQM<sub>ZN</sub> on your own dataset using subjective MOS labels.
 
 **Evaluation_SDB_CIQMzn_ROI.m**
+
 Performs same-database (SDB) evaluation for the CIQM<sub>ZN_Saliency</sub> metric.
 
 Trains two independent SVR models (RBF kernel) on the ROI and nROI feature vectors.
@@ -119,30 +120,31 @@ Evaluate the CIQM<sub>ZN_CovSal</sub> variant against literature IQMs (Table 4).
 
 Contains the MATLAB source for the two baseline saliency models used in this work:
 
-Itti — biologically inspired bottom-up model (intensity, color, orientation contrasts).
+**Itti** — biologically inspired bottom-up model (intensity, color, orientation contrasts).
 
-Improved Itti — extends Itti with additional texture and edge cues.
+**Improved Itti** — extends Itti with additional texture and edge cues.
 
 These are called by generateSaliencyMapsonImages.m. No external download is required for these two models.
 
 **5. Images / Datasets**
 
-Benchmark images (or subsets) and any associated MOS/DMOS label files for LIVE dataset are included so the evaluation scripts can be run out of the box. The MOS used in this study are rescaled to the median score of the CIDIQ dataset to align MOS from different datasets. For further details on rescaling the MOS, please refer to the following article
+Benchmark images (or subsets) and any associated MOS/DMOS label files for LIVE dataset are included so the evaluation scripts can be run out of the box. The MOS used in this study are rescaled to the median score of the CIDIQ dataset to align MOS from different datasets. For further details on rescaling the MOS, please refer to the following article:
+
 Khan M U, Mehmood I, & Luo M R.  No-Reference Generic Image Quality Assessment via Adaptive Fusion of Naturalness-Enhanced Color and Appearance Driven Spatial Metrics. IEEE Access, 2026, 14: 79811-79832.
 
 If you use the full datasets, download them from their original sources:
 
-LIVE – https://live.ece.utexas.edu/research/quality/
+**LIVE** – https://live.ece.utexas.edu/research/quality/
 
-CSIQ – https://s2.smu.edu/~eclarson/csiq/
+**CSIQ** – https://s2.smu.edu/~eclarson/csiq/
 
-TID2013 – http://www.ponomarenko.info/tid2013.htm
+**TID2013** – http://www.ponomarenko.info/tid2013.htm
 
-CIDIQ – see the corresponding publications ([19] in the paper)
+**CIDIQ** – see the corresponding publications ([19] in the paper)
 
-KADID – http://database.mmsp-kn.de/kadid-10k-database.html
+**KADID** – http://database.mmsp-kn.de/kadid-10k-database.html
 
-ZJU, ZJUI, ZJU_Xu - Links will be made available once datasets made available online
+**ZJU, ZJUI, ZJU<sub>Xu<sub>** - Links will be made available once datasets made available online
 
 TID2013 and KADID "Color Saturation" categories contain color-inverted images; the paper excludes these (2,839 / 9,949 images retained). Use the same exclusion when reproducing results.
 
@@ -166,9 +168,11 @@ TID2013 and KADID "Color Saturation" categories contain color-inverted images; t
 
 **LODO protocol:** Datasets sharing source images with the test set must be excluded from training (see Section Evaluation Protocol in the paper). The scripts include these exclusions for ZJU<sub>Xu</sub> ↔ {CIDIQ, KADID, ZJU} and ZJUI ↔ {CSIQ, TID2013, CIDIQ}.
 
-**Reproducibility:** Random splits are seeded; results should be stable across runs.
+**Reproducibility:** 1,000 splits are randoms; results can vary slightly.
+
 
 **Citation**
+
 If you use this code or the CIQM<sub>ZN</sub> / CIQM<sub>ZN_Saliency</sub> metrics in your research, please cite:
 
 bibtex
