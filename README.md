@@ -1,16 +1,14 @@
-This repository contains MATLAB based implementation of the method proposed in 
-"Saliency-Guided No-Reference Image Quality Assessment using a Naturalness-Enhanced Color-domain Image Quality Metric"
-CIC34 Barcelona Spain
+**CIQMz-v3-ROI**
+Saliency-Guided No-Reference Image Quality Assessment using a Naturalness-Enhanced Color-domain Image Quality Metric
 
-If you use this code, please cite the following article
-Citation:
-Khan M U, Luo M R, & Mehmood I. Visual Saliency-based Naturalness Enhanced Color-domain Image Quality Metric. Color and Imaging Conference, 2026:.
+This repository contains the MATLAB implementation of two no-reference image quality metrics (NR-IQMs) proposed in the CIC34 paper:
 
-The repository contains the following:
-1. CIQMzn feature calculation
-    use the 
-2. CIQMzn ROI feature calculation
+CIQM_ZN_ – a naturalness-enhanced extension of the color-domain CIQM<sub>Z</sub> metric (21 features).
 
-3. Saliency map generation
+CIQM_ZN_Saliency_ – a saliency-guided variant that extracts features separately from perceptually salient (ROI) and non-salient (nROI) regions, trains two SVR models, and fuses their predictions.
 
-4. Performance evaluation
+For full methodological details, please refer to the paper:
+
+Muhammad Usman Khan, Ming Ronnier Luo, Imran Mehmood, "Saliency-Guided No-Reference Image Quality Assessment using a Naturalness-Enhanced Color-domain Image Quality Metric", CIC34.
+
+**Repository Structure**
